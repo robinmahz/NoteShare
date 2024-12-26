@@ -11,6 +11,10 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
+Route::get('/notes', function () {
+    return view('pages.note');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

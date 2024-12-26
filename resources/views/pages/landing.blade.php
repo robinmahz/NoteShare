@@ -8,8 +8,7 @@
         <div class="mb-10">
             <h2 class="text-2xl font-bold text-blue-600 border-b-4 border-blue-600 pb-2 inline-block">5th Sem BEIT</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                <a href="{{ url('/note') }}"
-                    class="bg-white p-4 rounded-lg shadow-md hover:bg-blue-100 hover:shadow-lg transition-all">
+                <a href="/notes" class="bg-white p-4 rounded-lg shadow-md hover:bg-blue-100 hover:shadow-lg transition-all">
                     System Signal Processing
                 </a>
                 <a href="{{ url('/note') }}"

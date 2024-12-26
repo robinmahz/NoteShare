@@ -3,14 +3,15 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Social Media Section -->
             <div>
-                <img src="">
+                <img src="{{ asset('images/logo/logo.png') }}" alt="Share Note Logo" class="invert">
                 <p class="text-sm  mt-4">
                     Let’s connect on different Social Media! We post a lot about content tips, tricks to help save time
                     with your business legal and taxation-related works so that you can manage and grow your business.
                     Feel free to follow us there.
                 </p>
                 <div class="flex space-x-4 mt-4">
-                    <a href="#" class="text-gray-600 hover:text-gray-800"><i class="fab fa-facebook text-xl"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800"><i
+                            class="fab fa-facebook text-xl"></i></a>
                     <a href="#" class="text-gray-600 hover:text-gray-800"><i
                             class="fab fa-twitter text-xl"></i></a>
                     <a href="#" class="text-gray-600 hover:text-gray-800"><i
