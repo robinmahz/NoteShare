@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Social Media Section -->
             <div>
-                <img src="">
+                <img src="/Users/kamaljoshi/NoteShare/public/png1.png" alt="Fiscall Logo" class="h-10 w-auto">
                 <p class="text-sm text-gray-600 mt-4">
                     Let’s connect on different Social Media! We post a lot about content tips, tricks to help save time with your business legal and taxation-related works so that you can manage and grow your business. Feel free to follow us there.
                 </p>

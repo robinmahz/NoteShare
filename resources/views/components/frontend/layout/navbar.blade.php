@@ -1,11 +1,11 @@
  <!-- Navbar -->
- <nav class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="text-3xl font-extrabold tracking-wide">Note Sharing App</a>
-      <ul class="hidden md:flex space-x-8 text-lg font-semibold">
-          <li><a href="/" class="hover:text-gray-300 transition">Home</a></li>
-          <li><a href="/contributor" class="hover:text-gray-300 transition">Contributor</a></li>
-          <li><a href="/contact" class="hover:text-gray-300 transition">Contact</a></li>
+ <nav class="text-white shadow-lg bg-gradient-to-r from-blue-600 to-blue-800">
+  <div class="container flex items-center justify-between px-6 py-4 mx-auto">
+      <a href="/" class="text-3xl font-extrabold tracking-wide"> <img src="{{asset('images/logo/logo.png')}}" alt="NoteShare logo"></a>
+      <ul class="hidden space-x-8 text-lg font-semibold md:flex">
+          <li><a href="/" class="transition hover:text-gray-300">Home</a></li>
+          <li><a href="/contributor" class="transition hover:text-gray-300">Contributor</a></li>
+          <li><a href="/contact" class="transition hover:text-gray-300">Contact</a></li>
       </ul>
       <button class="block md:hidden focus:outline-none" id="menu-toggle">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -13,11 +13,11 @@
           </svg>
       </button>
   </div>
-  <div class="hidden md:hidden bg-blue-700 text-white" id="mobile-menu">
-      <ul class="space-y-4 text-lg font-semibold p-4">
-          <li><a href="/" class="block hover:text-gray-300 transition">Home</a></li>
-          <li><a href="/contributor" class="block hover:text-gray-300 transition">Contributor</a></li>
-          <li><a href="/contact" class="block hover:text-gray-300 transition">Contact</a></li>
+  <div class="hidden text-white bg-blue-700 md:hidden" id="mobile-menu">
+      <ul class="p-4 space-y-4 text-lg font-semibold">
+          <li><a href="/" class="block transition hover:text-gray-300">Home</a></li>
+          <li><a href="/contributor" class="block transition hover:text-gray-300">Contributor</a></li>
+          <li><a href="/contact" class="block transition hover:text-gray-300">Contact</a></li>
       </ul>
   </div>
 </nav>
