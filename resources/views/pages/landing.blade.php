@@ -1,6 +1,7 @@
 @extends('layouts.frontend.app')
 
 @section('content')
+    @include('components.frontend.landing.banner')
     <!-- Main Body Content -->
     <main class="flex-grow container mx-auto px-6 py-12">
         <!-- 5th Semester -->
