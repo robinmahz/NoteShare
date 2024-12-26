@@ -1,7 +1,7 @@
  <!-- Navbar -->
- <nav class="text-white shadow-lg bg-gradient-to-r from-blue-600 to-blue-800">
+ <nav class="text-white shadow-lg bg-gradient-to-r from-primary-dark to-primary">
      <div class="container flex items-center justify-between px-6 py-4 mx-auto">
-         <a href="/"> <img src="{{ asset('images/logo/logo.png') }}" alt="NoteShare logo" class="h-5"></a>
+         <a href="/"> <img src="{{ asset('images/logo/logo.png') }}" alt="NoteShare logo" class="h-8"></a>
          <ul class="hidden space-x-8 text-lg font-semibold md:flex">
              <li><a href="/" class="transition hover:text-gray-300">Home</a></li>
              <li><a href="/contributor" class="transition hover:text-gray-300">Contributor</a></li>

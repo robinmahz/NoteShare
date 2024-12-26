@@ -1,10 +1,10 @@
-<footer class="bg-gray-100 py-10">
+<footer class="bg-[#D4E6C2] py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Social Media Section -->
             <div>
                 <img src="">
-                <p class="text-sm text-gray-600 mt-4">
+                <p class="text-sm  mt-4">
                     Let’s connect on different Social Media! We post a lot about content tips, tricks to help save time
                     with your business legal and taxation-related works so that you can manage and grow your business.
                     Feel free to follow us there.
@@ -24,11 +24,11 @@
             <div>
                 <h5 class="text-lg font-semibold text-gray-800">Useful Links</h5>
                 <ul class="mt-4 space-y-2">
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Home</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">About</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Services</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Blog</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Home</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">About</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Services</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Contact</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Blog</a></li>
                 </ul>
             </div>
 
@@ -37,10 +37,10 @@
                 <h5 class="text-lg font-semibold text-gray-800">contact us</h5>
                 <ul class="mt-4 space-y-2">
                     <li><img src =""></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">FAQ</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact Support</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policy</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Terms & Conditions</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">FAQ</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Contact Support</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Privacy Policy</a></li>
+                    <li><a href="#" class=" hover:text-gray-800">Terms & Conditions</a></li>
                 </ul>
             </div>
 

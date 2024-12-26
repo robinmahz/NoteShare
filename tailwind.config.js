@@ -17,6 +17,11 @@ export default {
             fontFamily: {
                 sans: ["Dosis", "sans-serif"],
             },
+            colors: {
+                primary: "#6C983E",
+                "primary-dark": "#6C8A4C",
+                "primary-extra-light": "##B6D597",
+            },
         },
     },
 
