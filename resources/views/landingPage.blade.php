@@ -12,7 +12,9 @@
 
 <body>
     @include('components.frontend.navbar')
+    @include('components.frontend.body')
     @include('components.frontend.footer')
+  
 </body>
 
 </html>
