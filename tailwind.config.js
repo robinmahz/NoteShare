@@ -20,7 +20,11 @@ export default {
             colors: {
                 primary: "#6C983E",
                 "primary-dark": "#6C8A4C",
-                "primary-extra-light": "##B6D597",
+                "primary-light": "#D4E6C2",
+                "primary-el": "#DCFCE6",
+                accent: "#2463EB",
+                "accent-dark": "#2463EB",
+                "accent-light": "#DBE9FE",
             },
         },
     },

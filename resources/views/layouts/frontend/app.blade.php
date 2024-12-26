@@ -15,11 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-primary-light">
     @include('components.frontend.layout.navbar')
-    @yield('content')
+    <div class="mt-16 bg-white">
+        @yield('content')
+    </div>
     @include('components.frontend.layout.footer')
-
 </body>
 
 </html>

@@ -1,5 +1,5 @@
  <!-- Navbar -->
- <nav class="text-white shadow-lg bg-gradient-to-r from-primary-dark to-primary">
+ <nav class="text-white shadow-lg bg-gradient-to-r from-primary-dark to-primary fixed top-0 w-full z-10">
      <div class="container flex items-center justify-between px-6 py-4 mx-auto">
          <a href="/"> <img src="{{ asset('images/logo/logo.png') }}" alt="NoteShare logo" class="h-8"></a>
          <ul class="hidden space-x-8 text-lg font-semibold md:flex">
