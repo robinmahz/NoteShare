@@ -15,6 +15,9 @@ Route::get('/notes', function () {
     return view('pages.note');
 });
 
+Route::get('/contributer', function () {
+    return view('pages.contributer');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
