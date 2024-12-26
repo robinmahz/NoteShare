@@ -4,7 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('landingPage');
+    return view('pages.landing');
+});
+
+Route::get('/about', function () {
+    return view('pages.about');
 });
 
 

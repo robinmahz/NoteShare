@@ -23,9 +23,7 @@
         </h2>
     </section>
 
-
-
-    @include('components.frontend.body')
+    @yield('content')
     @include('components.frontend.layout.footer')
 
 </body>
