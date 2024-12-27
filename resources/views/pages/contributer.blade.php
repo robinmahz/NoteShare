@@ -18,10 +18,13 @@
                 </div>
                 <!-- Content Section -->
                 <div class="relative p-6 text-center">
-                    <p class="p-2 text-sm text-gray-700 bg-gray-100 rounded-lg shadow-sm">
-                        Backend specialist with expertise in Node.js and database management.
-                    </p>
-                    <h3 class="mt-1 text-xl font-semibold text-center text-gray-800">Developer 1</h3>
+                    <h3 class="mt-1 text-xl font-semibold text-center text-gray-800 ">Robin Maharjan</h3>
+                    <p class="flex items-center justify-center gap-4 p-4 text-sm text-gray-700 bg-gray-100 rounded-lg shadow-md">
+                        <a href="facebook.com"> <img src="{{('images/logo/facebook.png')}}" alt="Facebook Logo" class="w-8 h-8"></a>
+                          <a href="instagram.com"><img src="{{('images/logo/instagram.png')}}" alt="Instagram Logo" class="w-8 h-8"></a>
+                          <a href="x.com"><img src="{{('images/logo/x.png')}}" alt="X Logo" class="w-8 h-8"></a>
+                          <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
+                      </p>
                 </div>
             </div>
 
@@ -35,11 +38,14 @@
                     </div>
                 </div>
                 <!-- Content Section -->
-                <div class="relative p-6 text-center">
-                    <p class="p-2 text-sm text-gray-700 bg-gray-100 rounded-lg shadow-sm">
-                        Backend specialist with expertise in Node.js and database management.
-                    </p>
-                    <h3 class="mt-1 text-xl font-semibold text-center text-gray-800">Developer 2</h3>
+                <div class="relative p-6 text-center ">
+                    <h3 class="text-xl font-semibold text-center text-gray-800 ">Kamal Joshi</h3>
+                    <p class="flex items-center justify-center gap-4 p-4 text-sm text-gray-700 bg-gray-100 rounded-lg shadow-md">
+                        <a href="facebook.com"> <img src="{{('images/logo/facebook.png')}}" alt="Facebook Logo" class="w-8 h-8"></a>
+                          <a href="instagram.com"><img src="{{('images/logo/instagram.png')}}" alt="Instagram Logo" class="w-8 h-8"></a>
+                          <a href="x.com"><img src="{{('images/logo/x.png')}}" alt="X Logo" class="w-8 h-8"></a>
+                          <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
+                      </p>
                 </div>
             </div>
 
@@ -66,10 +72,13 @@
                 </div>
                 <!-- Content Section -->
                 <div class="relative p-6 text-center">
-                    <p class="p-2 text-sm text-gray-700 bg-gray-100 rounded-lg shadow-sm">
-                        Backend specialist with expertise in Node.js and database management.
+                    <h3 class="mt-1 mb-1 text-xl font-semibold text-center text-gray-800">contributer 1</h3>
+                    <p class="flex items-center justify-center gap-4 p-4 text-sm text-gray-700 bg-gray-100 rounded-lg shadow-md">
+                      <a href="facebook.com"> <img src="{{('images/logo/facebook.png')}}" alt="Facebook Logo" class="w-8 h-8"></a>
+                        <a href="instagram.com"><img src="{{('images/logo/instagram.png')}}" alt="Instagram Logo" class="w-8 h-8"></a>
+                        <a href="x.com"><img src="{{('images/logo/x.png')}}" alt="X Logo" class="w-8 h-8"></a>
+                        <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
                     </p>
-                    <h3 class="mt-1 text-xl font-semibold text-center text-gray-800">contributer 1</h3>
                 </div>
             </div>
 
