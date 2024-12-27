@@ -4,7 +4,7 @@
          <a href="/"> <img src="{{ asset('images/logo/logo.png') }}" alt="NoteShare logo" class="h-8"></a>
          <ul class="hidden space-x-8 text-lg font-semibold md:flex">
              <li><a href="/" class="transition hover:text-gray-300">Home</a></li>
-             <li><a href="/contributor" class="transition hover:text-gray-300">Contributor</a></li>
+             <li><a href="/contributer" class="transition hover:text-gray-300">Contributor</a></li>
              <li><a href="/contact" class="transition hover:text-gray-300">Contact</a></li>
          </ul>
          <button class="block md:hidden focus:outline-none" id="menu-toggle">
