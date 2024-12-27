@@ -23,7 +23,8 @@
                         <a href="facebook.com"> <img src="{{('images/logo/facebook.png')}}" alt="Facebook Logo" class="w-8 h-8"></a>
                           <a href="instagram.com"><img src="{{('images/logo/instagram.png')}}" alt="Instagram Logo" class="w-8 h-8"></a>
                           <a href="x.com"><img src="{{('images/logo/x.png')}}" alt="X Logo" class="w-8 h-8"></a>
-                          <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
+                          <a href="github.com"><img src="{{('images/logo/github.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
+                         <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
                       </p>
                 </div>
             </div>
@@ -44,6 +45,7 @@
                         <a href="facebook.com"> <img src="{{('images/logo/facebook.png')}}" alt="Facebook Logo" class="w-8 h-8"></a>
                           <a href="instagram.com"><img src="{{('images/logo/instagram.png')}}" alt="Instagram Logo" class="w-8 h-8"></a>
                           <a href="x.com"><img src="{{('images/logo/x.png')}}" alt="X Logo" class="w-8 h-8"></a>
+                          <a href="github.com"><img src="{{('images/logo/github.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
                           <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
                       </p>
                 </div>
@@ -77,6 +79,7 @@
                       <a href="facebook.com"> <img src="{{('images/logo/facebook.png')}}" alt="Facebook Logo" class="w-8 h-8"></a>
                         <a href="instagram.com"><img src="{{('images/logo/instagram.png')}}" alt="Instagram Logo" class="w-8 h-8"></a>
                         <a href="x.com"><img src="{{('images/logo/x.png')}}" alt="X Logo" class="w-8 h-8"></a>
+                        <a href="github.com"><img src="{{('images/logo/github.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
                         <a href="linkedin.com"><img src="{{('images/logo/linkedin.png')}}" alt="LinkedIn Logo" class="w-8 h-8"></a>
                     </p>
                 </div>
