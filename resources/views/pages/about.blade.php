@@ -14,12 +14,19 @@
     </header>
 
     <!-- About Section -->
-    <section class="px-6 py-16 md:px-20">
+    <section class="px-6 py-16 md:px-20 ">
         <div class="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
             <!-- Image Section -->
-            <div class="overflow-hidden rounded-lg shadow-lg" data-aos="fade-right">
-                <img src="{{ asset('images/contributer/developer.png') }}" alt="Our Team" class="object-cover w-full h-full">
-            </div>
+            <div class="shadow-2xl rounded-lg" data-aos="fade-right">
+                <div class="overflow-hidden rounded-lg">
+                  <div class="relative w-full h-full">
+                    <img src="{{ asset('images/about us/aboutus.jpg') }}" alt="Our Team" class="object-cover w-full h-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                  </div>
+                </div>
+              </div>
+
+
             <!-- Text Section -->
             <div data-aos="fade-left">
                 <h2 class="mb-6 text-3xl font-bold text-gray-800 md:text-4xl">Our Mission</h2>
@@ -36,10 +43,6 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="py-6 text-center text-white bg-gray-800">
-        <p class="text-sm">&copy; 2024 Your Company. All rights reserved.</p>
-    </footer>
 
     <!-- AOS Initialization -->
     <script>
@@ -49,6 +52,5 @@
             once: true,
         });
     </script>
-</body>
 
 @endsection
