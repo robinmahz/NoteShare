@@ -17,7 +17,7 @@
     <section class="px-6 py-16 md:px-20 ">
         <div class="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
             <!-- Image Section -->
-            <div class="shadow-2xl rounded-lg" data-aos="fade-right">
+            <div class="rounded-lg shadow-2xl" data-aos="fade-right">
                 <div class="overflow-hidden rounded-lg">
                   <div class="relative w-full h-full">
                     <img src="{{ asset('images/about us/aboutus.jpg') }}" alt="Our Team" class="object-cover w-full h-full">
@@ -44,13 +44,5 @@
     </section>
 
 
-    <!-- AOS Initialization -->
-    <script>
-        AOS.init({
-            duration: 1200,
-            easing: 'ease-in-out',
-            once: true,
-        });
-    </script>
 
 @endsection
