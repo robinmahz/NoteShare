@@ -6,7 +6,6 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100vh;
             font-family: 'Lato', sans-serif;
             display: flex;
             flex-direction: column;
@@ -21,6 +20,7 @@
             width: 100%;
             padding: 20px;
         }
+
 
         .section {
             width: 100%;
@@ -93,13 +93,6 @@
             margin: 40px 0;
         }
 
-        h2 {
-            font-size: 6rem;
-            font-weight: bold;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
         .social-icons {
             margin-top: 20px;
             display: flex;
@@ -169,82 +162,75 @@
 @endsection
 
 @section('content')
-    <div class="body">
-        <div class="wrapper">
-            <div class="section">
-                <h2>Developers</h2>
-                <div class="cards">
-                    <div class="card">
-                        <img src="{{ asset('images/contributer/kamal.jpg') }}" alt="Kamal Joshi">
-                        <div class="corner-social-icons">
-                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="descriptions">
-                            <h3 class="text-xl font-semibold">Kamal Joshi</h3>
-                            <p>Fullstack Developer</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="{{ asset('images/contributer/robin.jpeg') }}" alt="Robin Maharjan">
-                        <div class="corner-social-icons">
-                            <a href="https://www.instagram.com/robin.mahz/" target="_blank"
-                                class="transition-all delay-100 duration-300 transform bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:text-white group-hover:translate-x-0 group-hover:delay-200">
-                                <i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/robin-maharjan-57947a283/" target="_blank"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/robinmahz" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="descriptions">
-                            <h3 class="text-xl font-semibold">Robin Maharjan</h3>
-                            <p>Fullstack Developer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="section">
-                <h2>Contributors</h2>
-                <div class="cards">
-                    <div class="card">
-                        <img src="{{ asset('images/contributor1.jpg') }}" alt="Alex Brown">
-                        <div class="corner-social-icons">
-                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="descriptions">
-                            <h3 class="text-xl font-semibold">Alex Brown</h3>
-                            <p>UI/UX Designer</p>
-                            <div class="social-icons">
+    <section class="">
+        <div class="body !font-sans ">
+            <div class="wrapper">
+                <div class="section">
+                    <h2 class="text-5xl mb-8">Developers</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="{{ asset('images/contributer/kamal.jpg') }}" alt="Kamal Joshi">
+                            <div class="corner-social-icons">
                                 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
+                            <div class="descriptions">
+                                <h3 class="text-xl font-semibold">Kamal Joshi</h3>
+                                <p>Fullstack Developer</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="{{ asset('images/contributer/robin.jpeg') }}" alt="Robin Maharjan">
+                            <div class="corner-social-icons">
+                                <a href="https://www.instagram.com/robin.mahz/" target="_blank"
+                                    class="transition-all delay-100 duration-300 transform bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:text-white group-hover:translate-x-0 group-hover:delay-200">
+                                    <i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/robin-maharjan-57947a283/" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/robinmahz" target="_blank"
+                                    class="transition-all duration-300 transform bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-gray-800 ">
+                                    <i class="fab fa-github"></i></a>
+                            </div>
+                            <div class="descriptions">
+                                <h3 class="text-xl font-semibold">Robin Maharjan</h3>
+                                <p>Fullstack Developer</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="{{ asset('images/contributor2.jpg') }}" alt="Emma Wilson">
-                        <div class="corner-social-icons">
-                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="descriptions">
-                            <h3 class="text-xl font-semibold">Emma Wilson</h3>
-                            <p>Content Writer</p>
-                            <div class="social-icons">
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="section ">
+                    <h2 class="text-5xl mb-8">Contributors</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="{{ asset('images/contributor1.jpg') }}" alt="Alex Brown">
+                            <div class="corner-social-icons">
                                 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                            <div class="descriptions">
+                                <h3 class="text-xl font-semibold">Alex Brown</h3>
+                                {{-- <p>UI/UX Designer</p> --}}
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="{{ asset('images/contributor2.jpg') }}" alt="Emma Wilson">
+                            <div class="corner-social-icons">
+                                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                            <div class="descriptions">
+                                <h3 class="text-xl font-semibold">Emma Wilson</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 @endsection
