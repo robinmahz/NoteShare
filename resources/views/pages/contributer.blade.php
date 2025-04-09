@@ -166,14 +166,14 @@
         <div class="body !font-sans ">
             <div class="wrapper">
                 <div class="section">
-                    <h2 class="text-5xl mb-8">Developers</h2>
+                    <h2 class="mb-8 text-5xl">Developers</h2>
                     <div class="cards">
                         <div class="card">
                             <img src="{{ asset('images/contributer/kamal.jpg') }}" alt="Kamal Joshi">
                             <div class="corner-social-icons">
-                                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100015047167786" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Paracetamol77" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                             <div class="descriptions">
                                 <h3 class="text-xl font-semibold">Kamal Joshi</h3>
@@ -184,12 +184,12 @@
                             <img src="{{ asset('images/contributer/robin.jpeg') }}" alt="Robin Maharjan">
                             <div class="corner-social-icons">
                                 <a href="https://www.instagram.com/robin.mahz/" target="_blank"
-                                    class="transition-all delay-100 duration-300 transform bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:text-white group-hover:translate-x-0 group-hover:delay-200">
+                                    class="text-white transition-all duration-300 delay-100 transform rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:text-white group-hover:translate-x-0 group-hover:delay-200">
                                     <i class="fab fa-instagram"></i></a>
                                 <a href="https://www.linkedin.com/in/robin-maharjan-57947a283/" target="_blank"><i
                                         class="fab fa-linkedin-in"></i></a>
                                 <a href="https://github.com/robinmahz" target="_blank"
-                                    class="transition-all duration-300 transform bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-gray-800 ">
+                                    class="text-white transition-all duration-300 transform rounded-full bg-white/10 backdrop-blur-sm hover:bg-gray-800 ">
                                     <i class="fab fa-github"></i></a>
                             </div>
                             <div class="descriptions">
@@ -203,7 +203,7 @@
                 <div class="divider"></div>
 
                 <div class="section ">
-                    <h2 class="text-5xl mb-8">Contributors</h2>
+                    <h2 class="mb-8 text-5xl">Contributors</h2>
                     <div class="cards">
                         <div class="card">
                             <img src="{{ asset('images/contributor1.jpg') }}" alt="Alex Brown">
