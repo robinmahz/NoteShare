@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -20,5 +21,60 @@ class ContactController extends Controller
         // For now, let's just redirect back with a success message
 
         return back()->with('success', 'Thank you for contacting us! We will get back to you soon.');
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Contact $contact)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Contact $contact)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Contact $contact)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Contact $contact)
+    {
+        //
     }
 }
