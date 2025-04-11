@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +16,13 @@ Route::get('/about', function () {
 Route::get('/notes', function () {
     return view('pages.note');
 });
+Route::post('/notes', [NoteController::class, 'store'])->name('notes.store');
 
 Route::get('/contributer', function () {
     return view('pages.contributer');
 });
+
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
