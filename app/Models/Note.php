@@ -9,7 +9,7 @@ class Note extends Model
 {
     use GenerateSlug;
 
-    protected $fillable = ['name', 'slug', 'file', 'show', 'status', 'subject_id'];
+    protected $fillable = ['name', 'slug', 'file', 'show', 'status', 'subject_id', 'email'];
 
     public function subject()
     {

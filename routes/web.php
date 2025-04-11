@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController; 
+use App\Http\Controllers\ContactController;
 
 // Landing Page
 Route::get('/', function () {
@@ -18,6 +20,7 @@ Route::get('/about', function () {
 Route::get('/notes', function () {
     return view('pages.note');
 });
+Route::post('/notes', [NoteController::class, 'store'])->name('notes.store');
 
 // Contributer Page
 Route::get('/contributer', function () {
@@ -33,6 +36,8 @@ Route::get('/contact', function () {
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 // Dashboard (only for authenticated and verified users)
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
