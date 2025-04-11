@@ -9,18 +9,32 @@ class ContactController extends Controller
 {
     public function submit(Request $request)
     {
-        // Validate the form input
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email',
-            'subject' => 'required|string|max:255',
-            'message' => 'required|string',
-        ]);
+        try {
+            // Validate the form input
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'required|email',
+                'subject' => 'required|string|max:255',
+                'message' => 'required|string',
+            ]);
 
-        // You can handle the form data here (send email, save to database, etc.)
-        // For now, let's just redirect back with a success message
+            Contact::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ]);
 
-        return back()->with('success', 'Thank you for contacting us! We will get back to you soon.');
+            return back()->with([
+                'type' => 'success',
+                'message' => 'Your message has been sent successfully!',
+            ]);
+        } catch (\Exception $e) {
+            return back()->with([
+                'type' => 'error',
+                'message' => 'An error occurred while sending your message. Please try again later.',
+            ]);
+        }
     }
     /**
      * Display a listing of the resource.
