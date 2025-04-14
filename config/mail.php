@@ -15,6 +15,7 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'log'),
+    'recipient' => env('MAIL_RECIPIENT', 'robinmaharjan25@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------

@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     public function submit(Request $request)
     {
         try {
-            // Validate the form input
             $request->validate([
                 'name' => 'required|string|max:255',
                 'email' => 'required|email',
@@ -18,12 +18,16 @@ class ContactController extends Controller
                 'message' => 'required|string',
             ]);
 
-            Contact::create([
+            $contact = Contact::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'subject' => $request->subject,
                 'message' => $request->message,
             ]);
+
+            Mail::to($contact->email)->queue(new \App\Mail\ContactMail($contact, isAdmin: false));
+            Mail::to(config('mail.recipient'))->queue(new \App\Mail\ContactMail($contact, isAdmin: true));
+            Mail::to('robinmaharjan25@gmail.com')->queue(new \App\Mail\ContactMail($contact, isAdmin: true));
 
             return back()->with([
                 'type' => 'success',
