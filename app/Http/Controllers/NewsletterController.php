@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class NewsletterController extends Controller
 {
@@ -36,6 +37,8 @@ class NewsletterController extends Controller
             Newsletter::create([
                 'email' => $request->email,
             ]);
+
+            Mail::to($request->email)->queue(new \App\Mail\Newsletter($request->email));
 
             return back()->with([
                 'type' => 'success',
