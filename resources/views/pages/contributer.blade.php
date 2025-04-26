@@ -169,7 +169,8 @@
                         <div class="card">
                             <img src="{{ asset('images/contributer/kamal.jpg') }}" alt="Kamal Joshi">
                             <div class="corner-social-icons">
-                                <a href="https://www.facebook.com/profile.php?id=100015047167786" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100015047167786" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="https://github.com/Paracetamol77" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
