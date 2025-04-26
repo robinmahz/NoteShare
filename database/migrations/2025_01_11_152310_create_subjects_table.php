@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('code');
             $table->foreignId('semester_id')->cascadeOnDelete();
             $table->timestamps();
         });

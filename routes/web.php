@@ -16,11 +16,11 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
-// Notes Page
-Route::get('/notes', function () {
-    return view('pages.note');
+Route::controller(NoteController::class)->group(function () {
+    Route::get('/notes', 'index')->name('notes.index');
+    Route::post('/notes', 'store')->name('notes.store');
 });
-Route::post('/notes', [NoteController::class, 'store'])->name('notes.store');
+
 
 // Contributer Page
 Route::get('/contributer', function () {

@@ -12,6 +12,17 @@ use Illuminate\Support\Str;
 
 class NoteController extends Controller
 {
+    public function index()
+    {
+        $programs = Program::all();
+        $semesters = Semester::all();
+        $subjects = Subject::all();
+        $notes = Note::where('show', 1)->get(); // Fetch only visible notes
+
+        $notes = Note::all();
+        return view('pages.note', compact('programs', 'semesters', 'subjects', 'notes'));
+    }
+
     public function create()
     {
         $programs = Program::all(); // Fetch all programs
@@ -30,22 +41,21 @@ class NoteController extends Controller
         ]);
 
         // Generate unique slug
-        $slug = Str::slug($request->name);
-        $originalSlug = $slug;
-        $count = 1;
-        while (Note::where('slug', $slug)->exists()) {
-            $slug = $originalSlug . '-' . $count++;
-        }
+        // $slug = Str::slug($request->name);
+        // $originalSlug = $slug;
+        // $count = 1;
+        // while (Note::where('slug', $slug)->exists()) {
+        //     $slug = $originalSlug . '-' . $count++;
+        // }
 
         // Store the file
         $file = $request->file('file');
-        $filePath = $file->store('notes', 'public');
+        $filePath = $file->store('notes/' . $request->program_id . '/' . $request->semester_id . '/' . $request->subject_id, 'public');
         $fileUrl = Storage::url($filePath);
 
         // Save note
         Note::create([
             'name' => $request->name,
-            'slug' => $slug,
             'file' => $fileUrl,
             'show' => 0, // Hidden by default
             'status' => 0, // Pending verification
@@ -53,7 +63,7 @@ class NoteController extends Controller
             'email' => $request->email,
         ]);
 
-        return redirect()->route('notes.create')->with('success', 'Note uploaded successfully! Awaiting verification.');
+        return back()->with('success', 'Note uploaded successfully! Awaiting verification.');
     }
 
     public function getSemesters($programId)
