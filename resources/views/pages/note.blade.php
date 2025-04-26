@@ -10,22 +10,19 @@
             <div class="bg-white p-6 rounded-lg shadow-lg">
                 <h2 class="text-2xl font-semibold text-primary mb-4">View Notes</h2>
                 <ul class="space-y-4">
-                    <!-- Example Note Items -->
-                    <li class="bg-gray-100 p-4 rounded-lg shadow-md flex justify-between items-center">
-                        <span>System Signal Processing Notes</span>
-                        <a href="/storage/notes/system-signal-processing.pdf" target="_blank"
-                            class="text-primary hover:underline">Download</a>
-                    </li>
-                    <li class="bg-gray-100 p-4 rounded-lg shadow-md flex justify-between items-center">
-                        <span>Entrepreneurship Notes</span>
-                        <a href="/storage/notes/entrepreneurship.pdf" target="_blank"
-                            class="text-primary hover:underline">Download</a>
-                    </li>
-                    <li class="bg-gray-100 p-4 rounded-lg shadow-md flex justify-between items-center">
-                        <span>Data Structures Notes</span>
-                        <a href="/storage/notes/data-structures.pdf" target="_blank"
-                            class="text-primary hover:underline">Download</a>
-                    </li>
+
+                    @foreach ($notes as $note)
+                        <li class="bg-gray-100 p-4 rounded-lg shadow-md flex justify-between items-center">
+                            <span>{{ $note->name }}</span>
+                            <div class="flex space-x-4">
+                                <a href="{{ asset($note->file) }}" target="_blank"
+                                    class="text-blue-600 hover:underline">View</a>
+                                <a href="{{ asset($note->file) }}" target="_blank" class="text-primary hover:underline"
+                                    download="">Download</a>
+                            </div>
+
+                        </li>
+                    @endforeach
                 </ul>
             </div>
 
