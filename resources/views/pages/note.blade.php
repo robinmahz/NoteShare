@@ -32,48 +32,76 @@
             <!-- Upload Notes Section -->
             <div class="bg-white p-6 rounded-lg shadow-lg">
                 <h2 class="text-2xl font-semibold text-primary-dark mb-4">Upload Notes</h2>
-                <form method="POST" enctype="multipart/form-data">
+                <form method="POST" enctype="multipart/form-data" action="{{ route('notes.store') }}">
                     @csrf
-                    <!-- Note Title -->
+
+                    <!-- Note Name (Title) -->
                     <div class="mb-4">
-                        <label for="title" class="block text-sm font-medium text-gray-700">Note Title</label>
-                        <input type="text" name="title" id="title"
+                        <label for="name" class="block text-sm font-medium text-gray-700">Note Title</label>
+                        <input type="text" name="name" id="name" value="{{ old('name') }}"
                             class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
-                            placeholder="Title Here">
-                    </div>
-                    <div class="mb-4 flex justify-between gap-8">
-                        <div class="w-full">
-                            <label for="semester" class="block text-sm font-medium text-gray-700">Semester</label>
-                            <select name="semester" id="semester"
-                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
-                                <option value="" disabled selected>Select Semester</option>
-                                <option value="5th-beit">5th Semester BEIT</option>
-                                <option value="5th-comp">5th Semester Computer</option>
-                                <option value="4th-beit">4th Semester BEIT</option>
-                                <option value="4th-comp">4th Semester Computer</option>
-                            </select>
-                        </div>
-                        <div class="w-full">
-                            <label for="title" class="block text-sm font-medium text-gray-700">Program</label>
-                            <select name="semester" id="semester"
-                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
-                                <option value="" disabled selected>Select program</option>
-                                <option value="5th-beit">BEIT</option>
-                                <option value="5th-comp">BEComputer</option>
-                                <option value="4th-beit">BECv</option>
-                            </select>
-                        </div>
+                            placeholder="e.g., Chapter 1 - Basic Electrical" required>
+                        @error('name')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
                     </div>
 
+                    <!-- Email -->
                     <div class="mb-4">
-                        <label for="title" class="block text-sm font-medium text-gray-700">Subject</label>
-                        <select name="semester" id="semester"
-                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
-                            <option value="" disabled selected>Select Subject</option>
-                            <option value="5th-beit">C ++ </option>
-                            <option value="5th-comp">Instrumentaion</option>
-                            <option value="4th-beit">Data Structure and Algorithm</option>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+                        <input type="email" name="email" id="email" value="{{ old('email') }}"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+                            placeholder="e.g., user@example.com" required>
+                        @error('email')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <!-- Program Dropdown -->
+                    <div class="mb-4">
+                        <label for="program" class="block text-sm font-medium text-gray-700">Program</label>
+                        <select name="program_id" id="program" onchange="loadSemesters()"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+                            required>
+                            <option value="" disabled selected>Select Program</option>
+                            @foreach ($programs as $program)
+                                <option value="{{ $program->id }}"
+                                    {{ old('program_id') == $program->id ? 'selected' : '' }}>
+                                    {{ $program->short }} - {{ $program->name }}
+                                </option>
+                            @endforeach
                         </select>
+                        @error('program_id')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <!-- Semester Dropdown -->
+                    <div class="mb-4">
+                        <label for="semester" class="block text-sm font-medium text-gray-700">Semester</label>
+                        <select name="semester_id" id="semester" onchange="loadSubjects()"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+                            required>
+                            <option value="" disabled selected>Select Semester</option>
+                            <!-- Populated dynamically via JavaScript/AJAX -->
+                        </select>
+                        @error('semester_id')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <!-- Subject Dropdown -->
+                    <div class="mb-4">
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <select name="subject_id" id="subject"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+                            required>
+                            <option value="" disabled selected>Select Subject</option>
+                            <!-- Populated dynamically via JavaScript/AJAX -->
+                        </select>
+                        @error('subject_id')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <!-- File Upload -->
@@ -82,9 +110,12 @@
                         <input type="file" name="file" id="file"
                             class="mt-1 block text-sm text-black file:mr-4 file:py-2 file:px-4 
                                   file:rounded-full file:border-0 file:text-sm file:font-semibold 
-                                  file:bg-blue-50 file:text-primary hover:file:bg-blue-100 focus:ring-0 focus:outline-none">
+                                  file:bg-blue-50 file:text-primary hover:file:bg-blue-100 focus:ring-0 focus:outline-none"
+                            required>
+                        @error('file')
+                            <span class="text-red-500 text-sm">{{ $message }}</span>
+                        @enderror
                     </div>
-
 
                     <!-- Submit Button -->
                     <button type="submit"
@@ -93,6 +124,43 @@
                     </button>
                 </form>
             </div>
+
+            <script>
+                async function loadSemesters() {
+                    const programId = document.getElementById('program').value;
+                    const semesterSelect = document.getElementById('semester');
+                    semesterSelect.innerHTML = '<option value="" disabled selected>Select Semester</option>';
+
+                    if (programId) {
+                        const response = await fetch(`/api/semesters/${programId}`);
+                        const semesters = await response.json();
+                        semesters.forEach(sem => {
+                            const option = document.createElement('option');
+                            option.value = sem.id;
+                            option.text = sem.name;
+                            semesterSelect.appendChild(option);
+                        });
+                    }
+                    loadSubjects(); // Reset subjects when program changes
+                }
+
+                async function loadSubjects() {
+                    const semesterId = document.getElementById('semester').value;
+                    const subjectSelect = document.getElementById('subject');
+                    subjectSelect.innerHTML = '<option value="" disabled selected>Select Subject</option>';
+
+                    if (semesterId) {
+                        const response = await fetch(`/api/subjects/${semesterId}`);
+                        const subjects = await response.json();
+                        subjects.forEach(sub => {
+                            const option = document.createElement('option');
+                            option.value = sub.id;
+                            option.text = sub.name;
+                            subjectSelect.appendChild(option);
+                        });
+                    }
+                }
+            </script>
         </div>
     </div>
 @endsection

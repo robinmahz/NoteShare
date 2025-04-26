@@ -48,7 +48,7 @@
             <!-- Subscription Section -->
             <div>
                 <h5 class="text-lg font-semibold text-gray-800">Subscribe</h5>
-                <form action="#" method="POST" class="mt-4">
+                <form action="{{ route('newsletter.store') }}" method="POST" class="mt-4">
                     @csrf
                     <div class="flex">
                         <input type="email" name="email"
@@ -61,7 +61,6 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
                             </svg>
-
                         </button>
                     </div>
                 </form>
