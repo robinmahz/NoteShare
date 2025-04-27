@@ -46,12 +46,20 @@ class DatabaseSeeder extends Seeder
         }
 
         $subjects = [
+            // it 1st semester
+            ['name' => 'Engineering Mathematics I', 'code' => 'MTH 101', 'semester_id' => 1],
+            ['name' => 'Engineering Physics', 'code' => 'PHY 101', 'semester_id' => 1],
+            ['name' => 'Engineering Chemistry', 'code' => 'CHE 101', 'semester_id' => 1],
+            ['name' => 'Engineering Mechanics', 'code' => 'CIV 101', 'semester_id' => 1],
+            ['name' => 'Basic Electronics Engineering', 'code' => 'EEE 101', 'semester_id' => 1],
+            // it 2nd semester
             ['name' => 'Calculus I', 'code' => 'MTH 110', 'semester_id' => 1],
             ['name' => 'Electronic device & Circuits', 'code' => 'CSE102', 'semester_id' => 1],
             ['name' => 'Programming in C', 'code' => 'CSE101', 'semester_id' => 1],
             ['name' => 'Basic electrical engineering', 'code' => 'CSE102', 'semester_id' => 1],
             ['name' => 'Applied physics', 'code' => 'CSE101', 'semester_id' => 1],
             ['name' => 'Problem Solving Technique', 'code' => 'CSE102', 'semester_id' => 1],
+            // computer 1st semm
             ['name' => 'Algebra and geometry', 'code' => 'CSE103', 'semester_id' => 2],
             ['name' => 'Object oriented programming in c++', 'code' => 'CSE104', 'semester_id' => 2],
             ['name' => 'Basic Engineering drawing', 'code' => 'CSE105', 'semester_id' => 2],
